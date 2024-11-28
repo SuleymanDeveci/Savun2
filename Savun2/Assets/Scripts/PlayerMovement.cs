@@ -5,6 +5,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] InputHandler inputHandler;
     [SerializeField] float moveSpeed;
 
+    Animator animator;
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     private void FixedUpdate()
     {
         HandlePlayerMovement();
